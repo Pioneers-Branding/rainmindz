@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Rainmindz</title>
+    <link rel="icon" type="image/png"
+        href="https://res.cloudinary.com/damfndmrm/image/upload/v1772526561/Screenshot_2026-03-03_at_1.58.06_PM-removebg-preview_bzsycu.png">
+    <meta name="description" content="Thank you for contacting Rainmindz. We'll get back to you shortly.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #000000 0%, #0d1226 40%, #1a1f3a 100%);
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated background particles */
+        .bg-glow {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .bg-glow-1 {
+            width: 500px;
+            height: 500px;
+            background: #4facfe;
+            top: -150px;
+            right: -100px;
+            animation: floatGlow 8s ease-in-out infinite;
+        }
+
+        .bg-glow-2 {
+            width: 400px;
+            height: 400px;
+            background: #1e2754;
+            bottom: -100px;
+            left: -100px;
+            animation: floatGlow 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes floatGlow {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(30px, -30px);
+            }
+        }
+
+        .thankyou-container {
+            text-align: center;
+            z-index: 2;
+            padding: 2rem;
+            max-width: 600px;
+        }
+
+        /* Animated check circle */
+        .check-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1e2754, #4facfe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2.5rem;
+            box-shadow: 0 0 60px rgba(79, 172, 254, 0.3);
+            animation: popIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        .check-circle i {
+            font-size: 3rem;
+            color: #ffffff;
+            animation: checkDraw 0.4s 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes popIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes checkDraw {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Pulse ring */
+        .check-circle::before {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid rgba(79, 172, 254, 0.3);
+            animation: ringExpand 2s ease-out 0.8s infinite;
+        }
+
+        @keyframes ringExpand {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+        }
+
+        .thankyou-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            animation: fadeUp 0.5s 0.3s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .thankyou-title span {
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .thankyou-desc {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            animation: fadeUp 0.5s 0.5s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #1e2754, #4facfe);
+            color: #ffffff;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.25);
+            animation: fadeUp 0.5s 0.7s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(79, 172, 254, 0.35);
+        }
+
+        .btn-home i {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-home:hover i {
+            transform: translateX(-3px);
+        }
+
+        /* Footer */
+        .thankyou-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 1.5rem;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.8rem;
+            z-index: 2;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .thankyou-title {
+                font-size: 2rem;
+            }
+
+            .thankyou-desc {
+                font-size: 0.95rem;
+            }
+
+            .check-circle {
+                width: 90px;
+                height: 90px;
+                margin-bottom: 2rem;
+            }
+
+            .check-circle i {
+                font-size: 2.2rem;
+            }
+
+            .check-circle::before {
+                width: 90px;
+                height: 90px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background glows -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <div class="thankyou-container">
+        <div class="check-circle">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <h1 class="thankyou-title">Thank <span>You!</span></h1>
+        <p class="thankyou-desc">
+            Your message has been received successfully. Our team will review your inquiry and get back to you within 24
+            hours. We're excited to work with you!
+        </p>
+        <a href="index.html" class="btn-home">
+            <i class="fa-solid fa-arrow-left"></i> Back to Home
+        </a>
+    </div>
+
+    <div class="thankyou-footer">
+        &copy; 2026 Rainmindz. All rights reserved.
+    </div>
+</body>
+
+</html>

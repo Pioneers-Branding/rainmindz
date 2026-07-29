@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainmindz - AI Excellence</title>
+    <link rel="icon" type="image/png"
+        href="https://res.cloudinary.com/damfndmrm/image/upload/v1772526561/Screenshot_2026-03-03_at_1.58.06_PM-removebg-preview_bzsycu.png">
+    <meta name="description"
+        content="Get Things Done Faster With AI Excellence. Transform your workflow with cutting-edge AI solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Background Elements -->
+
+
+    <!-- Mouse follow glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="#home" class="logo">
+                <img src="https://res.cloudinary.com/damfndmrm/image/upload/v1772526561/Screenshot_2026-03-03_at_1.58.06_PM-removebg-preview_bzsycu.png"
+                    alt="Rainmindz Logo" style="height: 44px; object-fit: contain;">
+            </a>
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Products</a>
+                <a href="#process" class="nav-link">How It Works</a>
+                <a href="#faq" class="nav-link">Contact</a>
+            </nav>
+            <a href="#faq" class="btn btn-primary nav-btn">Get Started</a>
+
+            <button class="menu-toggle" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#services" class="mobile-link">Products</a>
+            <a href="#process" class="mobile-link">How It Works</a>
+            <a href="#faq" class="mobile-link">Contact</a>
+            <a href="#faq" class="btn btn-primary w-100 text-center">Get Started</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section - Full Page 3D Canvas -->
+        <section class="hero" id="home"
+            style="min-height: 100vh; position: relative; padding-top: 0; overflow: hidden; display: block;">
+            <div class="bg-mesh">
+                <div class="blob dark-blob"
+                    style="background: radial-gradient(circle, rgba(60, 100, 200, 0.15) 0%, transparent 70%);"></div>
+                <div class="grid-pattern"></div>
+            </div>
+
+            <!-- Central Rainmindz Label (Behind the canvas so it looks inside the transparent 3D sphere) -->
+            <div class="orbit-label" id="center-label"
+                style="position: absolute; top: 50%; left: 50%; pointer-events: none; transform: translate(-50%, -50%); color: #ffffff; font-weight: 800; font-size: 2rem; letter-spacing: 2px; text-shadow: 0 0 15px rgba(255, 255, 255, 0.9); z-index: 0;">
+                RAINMINDZ
+            </div>
+
+            <!-- 3D Three.js Canvas Container -->
+            <div id="three-canvas-container"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+
+            <!-- UI Overlay for Planet Tooltips (No headings/buttons per user request) -->
+            <div class="hero-container-full"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; pointer-events: none;">
+
+                <!-- Orbit details HTML overlays will be placed here by JS -->
+                <div id="orbit-overlays-container"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+
+                    <!-- Item 0: AIcrmz Orbit Label -->
+                    <a href="https://aicrmz.com" target="_blank" class="orbit-label" id="orbit-label-0"
+                        style="position: absolute; pointer-events: auto; transform: translate(-50%, -50%); cursor: pointer; color: white; font-weight: bold; font-size: 1.2rem; text-shadow: 0 0 10px rgba(255,255,255,0.5); text-decoration: none;">
+                        AIcrmz
+                    </a>
+                    <!-- Item 0: AIcrmz Detail Card -->
+                    <div class="orbit-detail" id="detail-card-0"
+                        style="position: absolute; pointer-events: auto; transform: translateY(10px) translateX(20px);">
+                        <div class="detail-header">
+                            <div class="detail-badge live">Live</div>
+                            <h3>AIcrmz</h3>
+                        </div>
+                        <p>Intelligent CRM solutions powered by advanced AI algorithms.</p>
+                        <div class="detail-tags">
+                            <span>Smart CRM</span><span>Automated</span><span>Analytics</span>
+                        </div>
+                        <a href="https://aicrmz.com" class="detail-link" target="_blank">Visit
+                            Platform aicrmz.com <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Item 1: Aitelz Orbit Label -->
+                    <a href="https://www.aitelz.com/" target="_blank" class="orbit-label" id="orbit-label-1"
+                        style="position: absolute; pointer-events: auto; transform: translate(-50%, -50%); cursor: pointer; color: white; font-weight: bold; font-size: 1.2rem; text-shadow: 0 0 10px rgba(255,255,255,0.5); text-decoration: none;">
+                        Aitelz
+                    </a>
+                    <!-- Item 1: Aitelz Detail Card -->
+                    <div class="orbit-detail" id="detail-card-1"
+                        style="position: absolute; pointer-events: auto; transform: translateY(10px) translateX(20px);">
+                        <div class="detail-header">
+                            <div class="detail-badge live">Live</div>
+                            <h3>Aitelz Voice Assistant</h3>
+                        </div>
+                        <p>Never miss a call. AI assistant picks up, forwards calls, schedules
+                            appointments, and assists customers with natural human voice 24/7.</p>
+                        <div class="detail-tags">
+                            <span>Human Voice</span><span>24/7 Active</span><span>Auto Schedule</span>
+                        </div>
+                        <a href="https://aitelz.com" class="detail-link" target="_blank">Visit
+                            Platform aitelz.com <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Item 2: Aifilmz Orbit Label -->
+                    <a href="https://aifilmz.com/" target="_blank" class="orbit-label" id="orbit-label-2"
+                        style="position: absolute; pointer-events: auto; transform: translate(-50%, -50%); cursor: pointer; color: white; font-weight: bold; font-size: 1.2rem; text-shadow: 0 0 10px rgba(255,255,255,0.5); text-decoration: none;">
+                        Aifilmz
+                    </a>
+                    <!-- Item 2: Aifilmz Detail Card -->
+                    <div class="orbit-detail" id="detail-card-2"
+                        style="position: absolute; pointer-events: auto; transform: translateY(10px) translateX(20px);">
+                        <div class="detail-header">
+                            <div class="detail-badge live">Live</div>
+                            <h3>Aifilmz Video Generation</h3>
+                        </div>
+                        <p>Create stunning, professional videos in minutes. From concept to
+                            completion, automate your entire workflow with cutting-edge AI.</p>
+                        <div class="detail-tags">
+                            <span>4K Quality</span><span>Instant Render</span><span>Auto Edit</span>
+                        </div>
+                        <a href="https://aifilmz.com" class="detail-link" target="_blank">Visit
+                            Platform aifilmz.com <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Item 3: Aitextbotz Orbit Label -->
+                    <a href="https://aitextbotz.com/" target="_blank" class="orbit-label" id="orbit-label-3"
+                        style="position: absolute; pointer-events: auto; transform: translate(-50%, -50%); cursor: pointer; color: white; font-weight: bold; font-size: 1.2rem; text-shadow: 0 0 10px rgba(255,255,255,0.5); text-decoration: none;">
+                        Aitextbotz
+                    </a>
+                    <!-- Item 3: Aitextbotz Detail Card -->
+                    <div class="orbit-detail" id="detail-card-3"
+                        style="position: absolute; pointer-events: auto; transform: translateY(10px) translateX(20px);">
+                        <div class="detail-header">
+                            <div class="detail-badge available">Available</div>
+                            <h3>Aitextbotz Custom Chatbots</h3>
+                        </div>
+                        <p>Build intelligent chatbots, assistants, forms, quizzes, and custom solutions in record time.
+                            Tailored precisely to your needs.</p>
+                        <div class="detail-tags">
+                            <span>Chatbots</span><span>Smart Forms</span><span>AI Quizzes</span>
+                        </div>
+                        <a href="https://aitextbotz.com" class="detail-link" target="_blank">Visit
+                            Platform aitextbotz.com <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Item 4: Aillmz Orbit Label -->
+                    <a href="https://aillmz.com/" target="_blank" class="orbit-label" id="orbit-label-4"
+                        style="position: absolute; pointer-events: auto; transform: translate(-50%, -50%); cursor: pointer; color: white; font-weight: bold; font-size: 1.2rem; text-shadow: 0 0 10px rgba(255,255,255,0.5); text-decoration: none;">
+                        Aillmz
+                    </a>
+                    <!-- Item 4: Aillmz Detail Card -->
+                    <div class="orbit-detail" id="detail-card-4"
+                        style="position: absolute; pointer-events: auto; transform: translateY(10px) translateX(20px);">
+                        <div class="detail-header">
+                            <div class="detail-badge available">Available</div>
+                            <h3>Aillmz Custom Models</h3>
+                        </div>
+                        <p>Custom large language models securely trained on your proprietary data for internal use
+                            cases.</p>
+                        <div class="detail-tags">
+                            <span>LLM</span><span>Secure</span><span>Custom Data</span>
+                        </div>
+                        <a href="https://aillmz.com" class="detail-link" target="_blank">Visit
+                            Platform aillmz.com <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Item 5: Airatingz Orbit Label -->
+                    <a href="https://airatingz.com/" target="_blank" class="orbit-label" id="orbit-label-5"
+                        style="position: absolute; pointer-events: auto; transform: translate(-50%, -50%); cursor: pointer; color: white; font-weight: bold; font-size: 1.2rem; text-shadow: 0 0 10px rgba(255,255,255,0.5); text-decoration: none;">
+                        Airatingz
+                    </a>
+                    <!-- Item 5: Airatingz Detail Card -->
+                    <div class="orbit-detail" id="detail-card-5"
+                        style="position: absolute; pointer-events: auto; transform: translateY(10px) translateX(20px);">
+                        <div class="detail-header">
+                            <div class="detail-badge live">Live</div>
+                            <h3>Airatingz Review Platform</h3>
+                        </div>
+                        <p>AI-powered ratings and review management. Collect, analyze, and amplify customer feedback to
+                            build trust and grow your brand reputation.</p>
+                        <div class="detail-tags">
+                            <span>Review AI</span><span>Reputation</span><span>Insights</span>
+                        </div>
+                        <a href="https://airatingz.com/" class="detail-link" target="_blank">Visit
+                            Platform airatingz.com <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid animate-on-scroll fade-up">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="6">0</div>
+                        <div class="stat-suffix">+</div>
+                        <div class="stat-label">AI Products</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-suffix">+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="99">0</div>
+                        <div class="stat-suffix">%</div>
+                        <div class="stat-label">Uptime Guaranteed</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="24">0</div>
+                        <div class="stat-suffix">/7</div>
+                        <div class="stat-label">AI Support</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What Is Rainmindz Section -->
+        <section class="what-is-section" id="about">
+            <div class="wis-bg">
+                <div class="wis-blob wis-blob-1"></div>
+                <div class="wis-blob wis-blob-2"></div>
+                <div class="wis-grid"></div>
+            </div>
+
+            <div class="container wis-container">
+
+                <!-- TOP: Two column intro -->
+                <div class="wis-intro animate-on-scroll fade-up">
+                    <div class="wis-intro-left">
+                        <div class="hero-chip mb-4" style="display:inline-block;">What Is Rainmindz</div>
+                        <h2 class="section-title wis-headline">
+                            The Operating System<br>for <span class="text-gradient">AI-First Businesses.</span>
+                        </h2>
+                        <div class="wis-divider-bar"></div>
+                    </div>
+                    <div class="wis-intro-right">
+                        <p class="wis-lead">Rainmindz is an AI products company on a singular mission: to give every
+                            business &mdash; from solo founders to global enterprises &mdash; access to the same class
+                            of intelligent automation that was once reserved only for Silicon Valley giants.</p>
+                        <p class="wis-body">We don't just build software. We engineer an ecosystem of interconnected AI
+                            tools that replace outdated manual workflows, supercharge team productivity, and put your
+                            business on autopilot &mdash; without sacrificing quality, control, or creativity.</p>
+                        <p class="wis-body">Each product in the Rainmindz suite is purpose-built for a specific
+                            bottleneck in the modern business stack &mdash; from customer relationships and voice
+                            communication, to video content, reputation management, and large language model
+                            infrastructure.</p>
+                        <a href="#services" class="wis-cta-link">Explore our products <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- MIDDLE: 3 Pillar cards -->
+                <div class="wis-pillars">
+                    <div class="wis-pillar animate-on-scroll fade-up" style="--delay: 0.1s">
+                        <div class="wis-pillar-icon-wrap">
+                            <div class="wis-pillar-icon"><i class="fa-solid fa-microchip"></i></div>
+                            <div class="wis-pillar-number">01</div>
+                        </div>
+                        <h3>Build Smarter</h3>
+                        <p>We start from scratch &mdash; no bloated legacy systems, no unnecessary dependencies. Every
+                            product is architected from the ground up with modern AI models, lean data pipelines, and a
+                            design philosophy centred on clarity and speed.</p>
+                        <ul class="wis-pillar-list">
+                            <li><i class="fa-solid fa-circle-dot"></i> Custom-trained AI models</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> Purpose-built product architecture</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> Zero bloat, full performance</li>
+                        </ul>
+                    </div>
+
+                    <div class="wis-pillar wis-pillar--accent animate-on-scroll fade-up" style="--delay: 0.2s">
+                        <div class="wis-pillar-icon-wrap">
+                            <div class="wis-pillar-icon"><i class="fa-solid fa-rocket"></i></div>
+                            <div class="wis-pillar-number">02</div>
+                        </div>
+                        <h3>Deploy Instantly</h3>
+                        <p>We eliminate the painful gap between buying software and actually using it. Our suite is
+                            designed for rapid activation &mdash; from onboarding to live deployment in hours, not weeks
+                            &mdash; so your team gets value from day one.</p>
+                        <ul class="wis-pillar-list">
+                            <li><i class="fa-solid fa-circle-dot"></i> One-click setup &amp; API access</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> Plug-and-play integrations</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> Dedicated onboarding support</li>
+                        </ul>
+                    </div>
+
+                    <div class="wis-pillar animate-on-scroll fade-up" style="--delay: 0.3s">
+                        <div class="wis-pillar-icon-wrap">
+                            <div class="wis-pillar-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <div class="wis-pillar-number">03</div>
+                        </div>
+                        <h3>Scale Endlessly</h3>
+                        <p>Whether you're serving 10 users or 10 million, the Rainmindz infrastructure scales
+                            horizontally on demand. Our cloud-native architecture handles load spikes, data growth, and
+                            expansion into new markets without breaking a sweat.</p>
+                        <ul class="wis-pillar-list">
+                            <li><i class="fa-solid fa-circle-dot"></i> Horizontal auto-scaling</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> 99.9% uptime SLA</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> Multi-region redundancy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- BOTTOM: Mission panel + vision/values -->
+                <div class="wis-mission-row animate-on-scroll fade-up" style="--delay: 0.15s">
+
+                    <div class="wis-mission-card">
+                        <div class="wis-mission-top">
+                            <div class="wis-mission-badge"><i class="fa-solid fa-bullseye"></i> Our Mission</div>
+                            <h3>To make world-class AI accessible to every business, everywhere.</h3>
+                            <p>The AI arms race shouldn't only be won by companies with billion-dollar R&amp;D budgets.
+                                Rainmindz democratises intelligent automation &mdash; giving small teams the power of
+                                enterprise-grade AI tools, at a fraction of the cost and complexity.</p>
+                        </div>
+                        <div class="wis-mission-facts">
+                            <div class="wis-fact">
+                                <span class="wis-fact-num">2023</span>
+                                <span class="wis-fact-lbl">Founded</span>
+                            </div>
+                            <div class="wis-fact-divider"></div>
+                            <div class="wis-fact">
+                                <span class="wis-fact-num">6</span>
+                                <span class="wis-fact-lbl">AI Products</span>
+                            </div>
+                            <div class="wis-fact-divider"></div>
+                            <div class="wis-fact">
+                                <span class="wis-fact-num">150+</span>
+                                <span class="wis-fact-lbl">Clients Served</span>
+                            </div>
+                            <div class="wis-fact-divider"></div>
+                            <div class="wis-fact">
+                                <span class="wis-fact-num">Global</span>
+                                <span class="wis-fact-lbl">Reach</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wis-values-panel">
+                        <div class="wis-values-header">
+                            <div class="wis-mission-badge wis-mission-badge--light"><i class="fa-solid fa-star"></i>
+                                Core Values</div>
+                        </div>
+                        <div class="wis-value-item">
+                            <div class="wis-value-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <div>
+                                <strong>Speed without compromise</strong>
+                                <p>We believe fast and great are not opposites. Our AI-first approach proves you can
+                                    have both.</p>
+                            </div>
+                        </div>
+                        <div class="wis-value-item">
+                            <div class="wis-value-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div>
+                                <strong>Trust by design</strong>
+                                <p>Privacy and security are embedded into our architecture from line one &mdash; never
+                                    bolted on as an afterthought.</p>
+                            </div>
+                        </div>
+                        <div class="wis-value-item">
+                            <div class="wis-value-icon"><i class="fa-solid fa-users"></i></div>
+                            <div>
+                                <strong>Human-centred automation</strong>
+                                <p>AI should augment human potential, not replace it. We build tools that amplify what
+                                    your team can already do.</p>
+                            </div>
+                        </div>
+                        <div class="wis-value-item">
+                            <div class="wis-value-icon"><i class="fa-solid fa-seedling"></i></div>
+                            <div>
+                                <strong>Built to last</strong>
+                                <p>We design durable systems that grow with our customers, not products built to lock
+                                    you in and slow you down.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Marquee Product Ticker -->
+                <div class="wis-ticker-wrap animate-on-scroll fade-up" style="--delay: 0.25s">
+                    <div class="wis-ticker-label">Our Product Suite</div>
+                    <div class="wis-ticker-track">
+                        <div class="wis-ticker-inner">
+                            <span><i class="fa-solid fa-users-gear"></i> AIcrmz</span>
+                            <span class="wis-ticker-dot">&middot;</span>
+                            <span><i class="fa-solid fa-phone-volume"></i> Aitelz</span>
+                            <span class="wis-ticker-dot">&middot;</span>
+                            <span><i class="fa-solid fa-film"></i> Aifilmz</span>
+                            <span class="wis-ticker-dot">&middot;</span>
+                            <span><i class="fa-solid fa-comment-dots"></i> Aitextbotz</span>
+                            <span class="wis-ticker-dot">&middot;</span>
+                            <span><i class="fa-solid fa-brain"></i> Aillmz</span>
+                            <span class="wis-ticker-dot">&middot;</span>
+                            <span><i class="fa-solid fa-star"></i> Airatingz</span>
+                            <span class="wis-ticker-dot">&middot;</span>
+                            <span><i class="fa-solid fa-users-gear"></i> AIcrmz</span>
+                            <span class="wis-ticker-dot">&middot;</span>
+                            <span><i class="fa-solid fa-phone-volume"></i> Aitelz</span>
+                            <span class="wis-ticker-dot">&middot;</span>
+                            <span><i class="fa-solid fa-film"></i> Aifilmz</span>
+                            <span class="wis-ticker-dot">&middot;</span>
+                            <span><i class="fa-solid fa-comment-dots"></i> Aitextbotz</span>
+                            <span class="wis-ticker-dot">&middot;</span>
+                            <span><i class="fa-solid fa-brain"></i> Aillmz</span>
+                            <span class="wis-ticker-dot">&middot;</span>
+                            <span><i class="fa-solid fa-star"></i> Airatingz</span>
+                            <span class="wis-ticker-dot">&middot;</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section" id="services">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-up">
+                    <div class="hero-chip mb-4 mx-auto" style="display:inline-block;">OUR PRODUCTS</div>
+                    <h2 class="section-title">Explore Our <span class="text-gradient">Products</span></h2>
+                    <p class="section-desc">Next-generation AI tools built for modern enterprises. Each product is
+                        designed to scale, automate, and dominate.</p>
+                </div>
+
+                <div class="rm-products-grid">
+
+                    <div class="rm-products-subgrid">
+                        <!-- AIcrmz -->
+                        <div class="rm-product-card rm-card-standard animate-on-scroll fade-up" style="--delay: 0.15s">
+                            <div class="rm-p-bg"></div>
+                            <div class="rm-p-image-wrap">
+                                <img src="./images/ai_crm_dashboard.png" alt="CRM Dashboard Data" class="rm-p-img" />
+                            </div>
+                            <div class="rm-p-content">
+                                <div class="rm-p-header">
+                                    <div class="rm-p-icon"><i class="fa-solid fa-users-gear"></i></div>
+                                    <h4>AIcrmz</h4>
+                                </div>
+                                <p>Intelligent CRM solutions powered by AI. Automate your lead tracking and engagement
+                                    directly within your daily workflow.</p>
+                                <ul class="rm-p-features">
+                                    <li><i class="fa-solid fa-check"></i> Autonomous Lead Generation</li>
+                                    <li><i class="fa-solid fa-check"></i> Predictive Sales Analytics</li>
+                                    <li><i class="fa-solid fa-check"></i> Smart Email Sequences</li>
+                                </ul>
+                                <a href="https://aicrmz.com/" target="_blank" class="rm-p-link">Explore AIcrmz <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Aitelz -->
+                        <div class="rm-product-card rm-card-standard animate-on-scroll fade-up" style="--delay: 0.2s">
+                            <div class="rm-p-bg"></div>
+                            <div class="rm-p-image-wrap">
+                                <img src="./images/ai_voice_waves.png" alt="Voice Call Technology Sound Waves"
+                                    class="rm-p-img" />
+                            </div>
+                            <div class="rm-p-content">
+                                <div class="rm-p-header">
+                                    <div class="rm-p-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                                    <h4>Aitelz</h4>
+                                </div>
+                                <p>Next-gen AI voice callers handling inbound and outbound sales 24/7 seamlessly with
+                                    ultra-realistic natural voice synthesis.</p>
+                                <ul class="rm-p-features">
+                                    <li><i class="fa-solid fa-check"></i> Human-like Voice Cloning</li>
+                                    <li><i class="fa-solid fa-check"></i> Multi-language Support</li>
+                                    <li><i class="fa-solid fa-check"></i> Instant Live Transfers</li>
+                                </ul>
+                                <a href="https://www.aitelz.com/" target="_blank" class="rm-p-link">Explore Aitelz <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Aifilmz -->
+                        <div class="rm-product-card rm-card-standard animate-on-scroll fade-up" style="--delay: 0.25s">
+                            <div class="rm-p-bg"></div>
+                            <div class="rm-p-image-wrap">
+                                <img src="./images/ai_video_engine.png" alt="Video Generation Platform Cinematics"
+                                    class="rm-p-img" />
+                            </div>
+                            <div class="rm-p-content">
+                                <div class="rm-p-header">
+                                    <div class="rm-p-icon"><i class="fa-solid fa-film"></i></div>
+                                    <h4>Aifilmz</h4>
+                                </div>
+                                <p>High-fidelity AI video generation and automation. Render stunning visuals and
+                                    synthesize marketing assets directly from text prompts.</p>
+                                <ul class="rm-p-features">
+                                    <li><i class="fa-solid fa-check"></i> Direct Text-to-Video Engine</li>
+                                    <li><i class="fa-solid fa-check"></i> Cinematic 4K Upscaling</li>
+                                    <li><i class="fa-solid fa-check"></i> Automated Editing Pipelines</li>
+                                </ul>
+                                <a href="https://aifilmz.com/" target="_blank" class="rm-p-link">Explore Aifilmz <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Aitextbotz -->
+                        <div class="rm-product-card rm-card-standard animate-on-scroll fade-up" style="--delay: 0.3s">
+                            <div class="rm-p-bg"></div>
+                            <div class="rm-p-image-wrap">
+                                <img src="./images/ai_chatbot_avatar.png" alt="Chatbots Matrix Interface"
+                                    class="rm-p-img" />
+                            </div>
+                            <div class="rm-p-content">
+                                <div class="rm-p-header">
+                                    <div class="rm-p-icon"><i class="fa-solid fa-comment-dots"></i></div>
+                                    <h4>Aitextbotz</h4>
+                                </div>
+                                <p>Intelligent multi-channel chatbots for smart routing, interactive quizzes, and
+                                    frictionless lead capturing processes.</p>
+                                <ul class="rm-p-features">
+                                    <li><i class="fa-solid fa-check"></i> Complex Logic & Workflows</li>
+                                    <li><i class="fa-solid fa-check"></i> Omni-channel Deployments</li>
+                                    <li><i class="fa-solid fa-check"></i> Rich CRM Integrations</li>
+                                </ul>
+                                <a href="https://aitextbotz.com/" target="_blank" class="rm-p-link">Explore Aitextbotz
+                                    <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Aillmz -->
+                        <div class="rm-product-card rm-card-standard animate-on-scroll fade-up" style="--delay: 0.35s">
+                            <div class="rm-p-bg"></div>
+                            <div class="rm-p-image-wrap">
+                                <img src="./images/ai_llm_brain.png" alt="AI Neural Model Grid" class="rm-p-img" />
+                            </div>
+                            <div class="rm-p-content">
+                                <div class="rm-p-header">
+                                    <div class="rm-p-icon"><i class="fa-solid fa-brain"></i></div>
+                                    <h4>Aillmz</h4>
+                                </div>
+                                <p>Enterprise LLMs securely fine-tuned on localized company data to maximize internal
+                                    compliance, speed, and privacy.</p>
+                                <ul class="rm-p-features">
+                                    <li><i class="fa-solid fa-check"></i> SEC/HIPAA Secure Deployments</li>
+                                    <li><i class="fa-solid fa-check"></i> RAG-based Custom Data</li>
+                                    <li><i class="fa-solid fa-check"></i> Lower Latency Inferences</li>
+                                </ul>
+                                <a href="https://aillmz.com/" target="_blank" class="rm-p-link">Explore Aillmz <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Airatingz -->
+                        <div class="rm-product-card rm-card-standard animate-on-scroll fade-up" style="--delay: 0.4s">
+                            <div class="rm-p-bg"></div>
+                            <div class="rm-p-image-wrap">
+                                <img src="./images/ai_ratings_dashboard.png" alt="AI Ratings and Reviews Dashboard"
+                                    class="rm-p-img" />
+                            </div>
+                            <div class="rm-p-content">
+                                <div class="rm-p-header">
+                                    <div class="rm-p-icon"><i class="fa-solid fa-star"></i></div>
+                                    <h4>Airatingz</h4>
+                                </div>
+                                <p>AI-powered ratings and review management. Collect, analyze, and instantly amplify
+                                    customer sentiment to build massive trust.</p>
+                                <ul class="rm-p-features">
+                                    <li><i class="fa-solid fa-check"></i> Automated Collection Campaigns</li>
+                                    <li><i class="fa-solid fa-check"></i> Sentiment Text Analysis</li>
+                                    <li><i class="fa-solid fa-check"></i> Auto Request & Reply</li>
+                                </ul>
+                                <a href="https://airatingz.com/" target="_blank" class="rm-p-link">Explore Airatingz <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us-dark" id="why-choose-us">
+            <div class="container">
+
+                <!-- Section Header with two-column layout -->
+                <div class="wcu-header-split animate-on-scroll fade-up">
+                    <div class="wcu-header-left">
+                        <div class="hero-chip mb-4" style="display:inline-block;">Why Choose Us</div>
+                        <h2 class="section-title">Lightning Fast.<br><span class="text-gradient">Premium Quality.</span>
+                        </h2>
+                    </div>
+                    <div class="wcu-header-right">
+                        <p class="wcu-header-desc">We don't just build AI tools—we engineer competitive advantages. Each
+                            product in the Rainmindz ecosystem is built to outperform, out-automate, and out-deliver in
+                            the modern business landscape.</p>
+                        <div class="wcu-header-badges">
+                            <span class="wcu-badge"><i class="fa-solid fa-check"></i> ISO-Grade Security</span>
+                            <span class="wcu-badge"><i class="fa-solid fa-check"></i> 99.9% Uptime SLA</span>
+                            <span class="wcu-badge"><i class="fa-solid fa-check"></i> Enterprise Scale</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Redesigned asymmetric bento grid -->
+                <div class="wcu-bento-grid">
+
+                    <!-- Featured Hero Card -->
+                    <div class="wcu-feat-card animate-on-scroll fade-up" style="--delay: 0.05s">
+                        <div class="wcu-feat-inner">
+                            <div class="wcu-feat-glow"></div>
+                            <div class="wcu-feat-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <div class="wcu-feat-label">Core Advantage</div>
+                            <h3>Instant AI.<br>Bulletproof Delivery.</h3>
+                            <p>From brief to delivery in hours, not days. Our AI-first infrastructure compresses weeks
+                                of traditional agency timelines into a single, automated workflow — without sacrificing
+                                an ounce of quality.</p>
+                            <div class="wcu-perf-bars">
+                                <div class="wcu-perf-item">
+                                    <div class="wcu-perf-label"><span>Speed</span><span>10x faster</span></div>
+                                    <div class="wcu-perf-track">
+                                        <div class="wcu-perf-fill" style="width: 95%; --bar-color: #4facfe;"></div>
+                                    </div>
+                                </div>
+                                <div class="wcu-perf-item">
+                                    <div class="wcu-perf-label"><span>Accuracy</span><span>99.2%</span></div>
+                                    <div class="wcu-perf-track">
+                                        <div class="wcu-perf-fill" style="width: 92%; --bar-color: #a78bfa;"></div>
+                                    </div>
+                                </div>
+                                <div class="wcu-perf-item">
+                                    <div class="wcu-perf-label"><span>Cost Savings</span><span>Up to 70%</span></div>
+                                    <div class="wcu-perf-track">
+                                        <div class="wcu-perf-fill" style="width: 70%; --bar-color: #34d399;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right column of 4 standard cards -->
+                    <div class="wcu-side-cards">
+
+                        <div class="wcu-side-card animate-on-scroll fade-up" style="--delay: 0.1s">
+                            <i class="fa-solid fa-bolt wcu-bg-icon"></i>
+                            <div class="wcu-content">
+                                <div class="wcu-icon-sm"><i class="fa-solid fa-bolt"></i></div>
+                                <div>
+                                    <h3 class="wcu-title">Rapid Delivery</h3>
+                                    <p class="wcu-desc">Ship in hours, not months. Our AI pipelines are brutally
+                                        optimized to compress your go-to-market timeline without ever compromising
+                                        output quality.</p>
+                                    <ul class="wcu-bullets">
+                                        <li><i class="fa-solid fa-circle-check"></i> Automated end-to-end pipelines</li>
+                                        <li><i class="fa-solid fa-circle-check"></i> Parallel AI task execution</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wcu-side-card animate-on-scroll fade-up" style="--delay: 0.15s">
+                            <i class="fa-solid fa-gem wcu-bg-icon"></i>
+                            <div class="wcu-content">
+                                <div class="wcu-icon-sm"><i class="fa-solid fa-gem"></i></div>
+                                <div>
+                                    <h3 class="wcu-title">Top-Tier Quality</h3>
+                                    <p class="wcu-desc">Premium, studio-grade outputs powered by next-generation models.
+                                        Every deliverable meets or exceeds the benchmark of the best human teams.</p>
+                                    <ul class="wcu-bullets">
+                                        <li><i class="fa-solid fa-circle-check"></i> Human-in-the-loop QA checks</li>
+                                        <li><i class="fa-solid fa-circle-check"></i> Multi-model output validation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wcu-side-card animate-on-scroll fade-up" style="--delay: 0.2s">
+                            <i class="fa-solid fa-wand-magic-sparkles wcu-bg-icon"></i>
+                            <div class="wcu-content">
+                                <div class="wcu-icon-sm"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                                <div>
+                                    <h3 class="wcu-title">Zero Hassle Setup</h3>
+                                    <p class="wcu-desc">No complex integrations, no steep learning curves. Plug in, turn
+                                        on, and let AI take over tedious, time-consuming tasks from day one.</p>
+                                    <ul class="wcu-bullets">
+                                        <li><i class="fa-solid fa-circle-check"></i> One-click onboarding flows</li>
+                                        <li><i class="fa-solid fa-circle-check"></i> Pre-built API connectors</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wcu-side-card animate-on-scroll fade-up" style="--delay: 0.25s">
+                            <i class="fa-solid fa-shield-halved wcu-bg-icon"></i>
+                            <div class="wcu-content">
+                                <div class="wcu-icon-sm"><i class="fa-solid fa-shield-halved"></i></div>
+                                <div>
+                                    <h3 class="wcu-title">Enterprise-Grade Security</h3>
+                                    <p class="wcu-desc">Your data never leaves your control. End-to-end encryption,
+                                        RBAC, and full audit logs give you enterprise-grade peace of mind at every
+                                        layer.</p>
+                                    <ul class="wcu-bullets">
+                                        <li><i class="fa-solid fa-circle-check"></i> AES-256 encryption at rest</li>
+                                        <li><i class="fa-solid fa-circle-check"></i> SOC 2-ready compliance roadmap</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Bottom row: 2 more wide cards -->
+                <div class="wcu-bottom-row">
+                    <div class="wcu-bottom-card animate-on-scroll fade-up" style="--delay: 0.3s">
+                        <i class="fa-solid fa-clock-rotate-left wcu-bg-icon"></i>
+                        <div class="wcu-content">
+                            <div class="wcu-icon-sm"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                            <h3 class="wcu-title">24/7 Autonomous Operation</h3>
+                            <p class="wcu-desc">Our highly redundant AI architectures operate continuously, handling
+                                customer interactions, generating content, and processing data — even when your team is
+                                offline. Sleep easy knowing your business never stops.</p>
+                        </div>
+                        <div class="wcu-stat-chip"><span>99.9%</span> Uptime</div>
+                    </div>
+                    <div class="wcu-bottom-card animate-on-scroll fade-up" style="--delay: 0.35s">
+                        <i class="fa-solid fa-chart-line wcu-bg-icon"></i>
+                        <div class="wcu-content">
+                            <div class="wcu-icon-sm"><i class="fa-solid fa-chart-line"></i></div>
+                            <h3 class="wcu-title">Scales With Your Growth</h3>
+                            <p class="wcu-desc">Whether you're a lean startup or a global enterprise, every Rainmindz
+                                product is architected to scale horizontally — handling 10x traffic spikes, 100x data
+                                loads, and unlimited concurrency without missing a beat.</p>
+                        </div>
+                        <div class="wcu-stat-chip"><span>150+</span> Happy Clients</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Our Process (How It Works) Section - Redesigned -->
+        <section class="our-process-v4" id="process">
+            <!-- Background decor -->
+            <div class="proc-bg-decor">
+                <div class="proc-orb proc-orb-1"></div>
+                <div class="proc-orb proc-orb-2"></div>
+                <div class="proc-grid-lines"></div>
+            </div>
+
+            <div class="container" style="position:relative; z-index:2;">
+                <div class="section-header animate-on-scroll fade-up" style="text-align: center;">
+                    <div class="hero-chip mb-4 mx-auto" style="display:inline-block; background:#1e2754; color:#fff;">
+                        Our Process</div>
+                    <h2 class="section-title" style="color:#ffffff;">How It <span class="text-gradient">Works</span>
+                    </h2>
+                    <p class="section-desc" style="margin: 0 auto; color: rgba(255,255,255,0.6);">From idea to
+                        deployment in three streamlined steps. No bloated processes — just intelligent automation that
+                        gets results, fast.</p>
+                </div>
+
+                <!-- Step Cards Row -->
+                <div class="proc-steps-row">
+
+                    <!-- Removed connector lines -->
+
+                    <!-- Step 1 -->
+                    <div class="proc-step-card animate-on-scroll fade-up" style="--delay: 0.1s">
+                        <div class="proc-step-number">01</div>
+                        <div class="proc-icon-wrap">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <div class="proc-icon-ring"></div>
+                        </div>
+                        <div class="proc-step-tag">Discovery</div>
+                        <h3>Share Your Vision</h3>
+                        <p>Tell us exactly what you want to achieve. We start every engagement with a focused discovery
+                            session to understand your goals, constraints, and opportunities — no fluff, just insight.
+                        </p>
+                        <ul class="proc-bullets">
+                            <li><i class="fa-solid fa-circle-dot"></i> Dedicated strategy consultation</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> Product fit mapping &amp; scope definition</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> Custom AI solution blueprint</li>
+                        </ul>
+                        <div class="proc-time-chip"><i class="fa-regular fa-clock"></i> As fast as 1 hour</div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="proc-step-card animate-on-scroll fade-up" style="--delay: 0.2s">
+                        <div class="proc-step-number">02</div>
+                        <div class="proc-icon-wrap">
+                            <i class="fa-solid fa-microchip"></i>
+                            <div class="proc-icon-ring"></div>
+                        </div>
+                        <div class="proc-step-tag">AI Execution</div>
+                        <h3>AI Does the Work</h3>
+                        <p>Our world-class AI models spring into action. Multi-agent pipelines work in parallel to
+                            produce, validate, and refine outputs at machine speed — eliminating bottlenecks that slow
+                            traditional agencies.</p>
+                        <ul class="proc-bullets">
+                            <li><i class="fa-solid fa-circle-dot"></i> Multi-model AI orchestration</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> Real-time quality feedback loops</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> Automated revision &amp; refinement</li>
+                        </ul>
+                        <div class="proc-time-chip"><i class="fa-regular fa-clock"></i> Minutes to hours</div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="proc-step-card animate-on-scroll fade-up" style="--delay: 0.3s">
+                        <div class="proc-step-number">03</div>
+                        <div class="proc-icon-wrap">
+                            <i class="fa-solid fa-rocket"></i>
+                            <div class="proc-icon-ring"></div>
+                        </div>
+                        <div class="proc-step-tag">Launch</div>
+                        <h3>Review &amp; Deploy</h3>
+                        <p>Receive your polished deliverables ready for immediate deployment. Review, request tweaks if
+                            needed, and go live — with ongoing AI support baked in to keep your systems performing at
+                            peak capacity.</p>
+                        <ul class="proc-bullets">
+                            <li><i class="fa-solid fa-circle-dot"></i> Instant delivery &amp; approval portal</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> One-click deployment integrations</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> Ongoing AI monitoring &amp; support</li>
+                        </ul>
+                        <div class="proc-time-chip"><i class="fa-regular fa-clock"></i> Same day go-live</div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom CTA strip -->
+                <div class="proc-cta-strip animate-on-scroll fade-up" style="--delay: 0.4s">
+                    <div class="proc-cta-left">
+                        <span class="proc-cta-label">Ready to get started?</span>
+                        <p>Join 150+ businesses transforming their operations with Rainmindz AI.</p>
+                    </div>
+                    <a href="#faq" class="btn btn-primary proc-cta-btn">Start Your Journey <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </section>
+        <!-- FAQ & Contact — Final Redesign -->
+        <section class="faqc-final" id="faq">
+
+            <!-- animated background -->
+            <div class="faqc-final-bg">
+                <div class="faqcf-glow faqcf-glow-1"></div>
+                <div class="faqcf-glow faqcf-glow-2"></div>
+                <div class="faqcf-grid"></div>
+            </div>
+
+            <div class="container" style="position:relative;z-index:2;">
+
+                <!-- Centered heading -->
+                <div class="faqcf-heading animate-on-scroll fade-up">
+                    <span class="faqcf-eyebrow"><i class="fa-solid fa-circle-question"></i>&nbsp; FAQ &amp;
+                        Contact</span>
+                    <h2>Have Questions? <br><span class="text-gradient">We Have Answers.</span></h2>
+                    <p>Everything you need to know — answered honestly. Or reach out and we'll respond within one
+                        business day.</p>
+                </div>
+
+                <!-- Two-column body -->
+                <div class="faqcf-body">
+
+                    <!-- ─── LEFT: Accordion FAQ ─── -->
+                    <div class="faqcf-left animate-on-scroll fade-up" style="--delay:0.1s">
+
+                        <div class="faqcf-list" id="faqcf-accordion">
+
+                            <div class="faqcf-item">
+                                <button class="faqcf-btn" data-target="fa1">
+                                    <span class="faqcf-q-icon"><i class="fa-solid fa-bolt"></i></span>
+                                    <span>How quickly can I start seeing results?</span>
+                                    <span class="faqcf-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                                </button>
+                                <div class="faqcf-panel" id="fa1">
+                                    <p>Most clients see measurable improvements within <strong>7–14 days</strong> of
+                                        deployment. Simpler tools like automated messaging or review management show
+                                        results in 24–48 hours. Custom LLM fine-tuning takes 2–4 weeks depending on data
+                                        scale.</p>
+                                    <div class="faqcf-fact"><i class="fa-solid fa-clock"></i> Typical onboarding: under
+                                        1 day</div>
+                                </div>
+                            </div>
+
+                            <div class="faqcf-item">
+                                <button class="faqcf-btn" data-target="fa2">
+                                    <span class="faqcf-q-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                                    <span>Is my data safe with your AI models?</span>
+                                    <span class="faqcf-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                                </button>
+                                <div class="faqcf-panel" id="fa2">
+                                    <p>Absolutely. We use <strong>AES-256 encryption</strong> at rest and in transit,
+                                        strict RBAC, complete audit trails, and full per-client data isolation. Your
+                                        data is never used to train other clients' models. We follow a SOC 2-aligned
+                                        security roadmap.</p>
+                                    <div class="faqcf-fact"><i class="fa-solid fa-shield-halved"></i> AES-256 · RBAC ·
+                                        Full audit logs</div>
+                                </div>
+                            </div>
+
+                            <div class="faqcf-item">
+                                <button class="faqcf-btn" data-target="fa3">
+                                    <span class="faqcf-q-icon"><i class="fa-solid fa-brain"></i></span>
+                                    <span>Do you offer custom AI models for my industry?</span>
+                                    <span class="faqcf-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                                </button>
+                                <div class="faqcf-panel" id="fa3">
+                                    <p>Yes, via <strong>Aillmz</strong>. We fine-tune enterprise LLMs on your own
+                                        internal data — compliance docs, product manuals, customer transcripts, or
+                                        proprietary knowledge bases — without exposing any of your data externally.</p>
+                                    <div class="faqcf-fact"><i class="fa-solid fa-brain"></i> Available via Aillmz —
+                                        contact us for pricing</div>
+                                </div>
+                            </div>
+
+                            <div class="faqcf-item">
+                                <button class="faqcf-btn" data-target="fa4">
+                                    <span class="faqcf-q-icon"><i class="fa-solid fa-plug"></i></span>
+                                    <span>Can I integrate with my existing CRM or tools?</span>
+                                    <span class="faqcf-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                                </button>
+                                <div class="faqcf-panel" id="fa4">
+                                    <p>Yes. We offer <strong>RESTful APIs and webhooks</strong> compatible with
+                                        Salesforce, HubSpot, Zoho, Pipedrive, Slack, and WhatsApp Business. AIcrmz can
+                                        run standalone or overlay your existing CRM via deep API integration.</p>
+                                    <div class="faqcf-fact"><i class="fa-solid fa-plug"></i> Salesforce · HubSpot · Zoho
+                                        · WhatsApp + more</div>
+                                </div>
+                            </div>
+
+                            <div class="faqcf-item">
+                                <button class="faqcf-btn" data-target="fa5">
+                                    <span class="faqcf-q-icon"><i class="fa-regular fa-calendar"></i></span>
+                                    <span>What's included in the free demo?</span>
+                                    <span class="faqcf-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                                </button>
+                                <div class="faqcf-panel" id="fa5">
+                                    <p>We offer a <strong>live 30-minute demo session</strong> tailored to your use
+                                        case, including real sandbox access where you can experience our AI output
+                                        quality hands-on. No credit card needed, no commitment required.</p>
+                                    <div class="faqcf-fact"><i class="fa-regular fa-calendar"></i> Book a free 30-min
+                                        demo with our team</div>
+                                </div>
+                            </div>
+
+                            <div class="faqcf-item">
+                                <button class="faqcf-btn" data-target="fa6">
+                                    <span class="faqcf-q-icon"><i class="fa-solid fa-network-wired"></i></span>
+                                    <span>How is Rainmindz different from other AI tools?</span>
+                                    <span class="faqcf-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                                </button>
+                                <div class="faqcf-panel" id="fa6">
+                                    <p>Other AI tools solve one problem. Rainmindz is a <strong>connected ecosystem of 6
+                                            AI products</strong> that work independently or together across your entire
+                                        business stack — from CRM and calling to video, chatbot, LLM, and reputation
+                                        management.</p>
+                                    <div class="faqcf-fact"><i class="fa-solid fa-network-wired"></i> 6 products · 1
+                                        unified AI platform</div>
+                                </div>
+                            </div>
+
+                            <div class="faqcf-item">
+                                <button class="faqcf-btn" data-target="fa7">
+                                    <span class="faqcf-q-icon"><i class="fa-solid fa-headset"></i></span>
+                                    <span>What support do you provide after launch?</span>
+                                    <span class="faqcf-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                                </button>
+                                <div class="faqcf-panel" id="fa7">
+                                    <p>Every deployment includes <strong>AI performance monitoring, system health
+                                            checks, and a dedicated success manager</strong> for enterprise plans. We
+                                        push model updates, flag issues proactively, and run quarterly business reviews
+                                        to maximize your ROI.</p>
+                                    <div class="faqcf-fact"><i class="fa-solid fa-headset"></i> 24/7 email · Live chat ·
+                                        Dedicated CSM (Enterprise)</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ─── RIGHT: Contact Form ─── -->
+                    <div class="faqcf-right animate-on-scroll fade-up" style="--delay:0.2s">
+                        <div class="faqcf-contact-card">
+
+                            <!-- Top info section -->
+                            <div class="faqcf-card-top">
+                                <div class="faqcf-card-top-left">
+                                    <div class="faqcf-badge-pill"><i class="fa-solid fa-paper-plane"></i> Get In Touch
+                                    </div>
+                                    <h3>Let's Build<br><span class="text-gradient">Something Great.</span></h3>
+                                    <p>Tell us about your project. We respond within one business day — usually much
+                                        faster.</p>
+                                </div>
+                                <div class="faqcf-status-pill">
+                                    <span class="faqcf-status-dot"></span>
+                                    <span>We're online</span>
+                                </div>
+                            </div>
+
+                            <!-- Contact pills -->
+                            <div class="faqcf-contact-pills">
+                                <a href="tel:+919789565515" class="faqcf-cpill">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <div><span>Call us</span><strong>+91 97895 65515</strong></div>
+                                </a>
+                                <a href="mailto:arush@rainmindz.com" class="faqcf-cpill">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <div><span>Email us</span><strong>arush@rainmindz.com</strong></div>
+                                </a>
+                            </div>
+
+                            <!-- Form -->
+                            <form class="faqcf-form" accept-charset="UTF-8"
+                                action="https://app.formester.com/forms/OBRSG9Xru/submissions" method="POST">
+
+                                <div class="faqcf-form-row">
+                                    <div class="faqcf-inp-wrap">
+                                        <i class="fa-solid fa-user faqcf-inp-icon"></i>
+                                        <input type="text" name="name" placeholder="Your Full Name" required>
+                                    </div>
+                                    <div class="faqcf-inp-wrap">
+                                        <i class="fa-solid fa-envelope faqcf-inp-icon"></i>
+                                        <input type="email" name="email" placeholder="Email Address" required>
+                                    </div>
+                                </div>
+
+                                <div class="faqcf-inp-wrap">
+                                    <i class="fa-solid fa-phone faqcf-inp-icon"></i>
+                                    <input type="tel" name="mobile" placeholder="Phone / WhatsApp" required>
+                                </div>
+
+                                <div class="faqcf-inp-wrap faqcf-sel-wrap">
+                                    <i class="fa-solid fa-grid-2 faqcf-inp-icon"></i>
+                                    <select name="service" required>
+                                        <option value="" disabled selected>I'm interested in…</option>
+                                        <option>AIcrmz — AI CRM</option>
+                                        <option>Aitelz — AI Calling</option>
+                                        <option>Aifilmz — AI Video</option>
+                                        <option>Aitextbotz — AI Chatbot</option>
+                                        <option>Aillmz — Enterprise LLM</option>
+                                        <option>Airatingz — Review Management</option>
+                                        <option>Multiple Products</option>
+                                        <option>Other / Not sure yet</option>
+                                    </select>
+                                </div>
+
+                                <div class="faqcf-inp-wrap">
+                                    <textarea name="message" rows="4" placeholder="Describe your project or goals…"
+                                        required></textarea>
+                                </div>
+
+                                <button type="submit" class="faqcf-submit">
+                                    <span>Send Message</span>
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+
+                                <p class="faqcf-privacy"><i class="fa-solid fa-lock"></i> 100% private. We never share
+                                    your information.</p>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-top-glow"></div>
+        <div class="container footer-content-v2">
+            <!-- Brand Column -->
+            <div class="footer-col-v2 brand-section">
+                <a href="#home" class="logo footer-logo">
+                    <img src="https://res.cloudinary.com/damfndmrm/image/upload/v1772526561/Screenshot_2026-03-03_at_1.58.06_PM-removebg-preview_bzsycu.png"
+                        alt="Rainmindz Logo"
+                        style="height: 52px; object-fit: contain; filter: brightness(0) invert(1);">
+                </a>
+                <p class="brand-desc">Architecting the future of enterprise intelligence. Our ecosystem of autonomous AI
+                    tools helps modern businesses scale beyond human limits.</p>
+                <div class="social-links-v2">
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Products Column -->
+            <div class="footer-col-v2">
+                <h4>Ecosystem</h4>
+                <ul class="footer-links">
+                    <li><a href="https://aicrmz.com/" target="_blank">AIcrmz</a></li>
+                    <li><a href="https://www.aitelz.com/" target="_blank">Aitelz Voice</a></li>
+                    <li><a href="https://aifilmz.com/" target="_blank">Aifilmz Video</a></li>
+                    <li><a href="https://aitextbotz.com/" target="_blank">Aitextbotz</a></li>
+                    <li><a href="https://aillmz.com/" target="_blank">Aillmz Enterprise</a></li>
+                    <li><a href="https://airatingz.com/" target="_blank">Airatingz Reviews</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-col-v2">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Products</a></li>
+                    <li><a href="#process">How It Works</a></li>
+                    <li><a href="#faq">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Column -->
+            <div class="footer-col-v2 newsletter-col">
+                <h4>Stay Ahead</h4>
+                <p>Get the latest AI breakthroughs delivered to your inbox.</p>
+                <form class="footer-newsletter" accept-charset="UTF-8"
+                    action="https://app.formester.com/forms/OBRSG9Xru/submissions" method="POST">
+                    <div class="newsletter-input-group">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+                <div class="footer-contact-info">
+                    <a href="tel:+919789565515"><i class="fa-solid fa-phone"></i> +91 97895 65515</a>
+                    <a href="mailto:arush@rainmindz.com"><i class="fa-solid fa-envelope"></i> arush@rainmindz.com</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom-v2">
+            <div class="container fb-content">
+                <p>&copy; 2026 Rainmindz AI. All rights reserved.</p>
+                <div class="fb-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Load VanillaTilt for 3D hover effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
